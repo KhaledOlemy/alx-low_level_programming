@@ -1,2 +1,2 @@
 #!/bin/bash
-$CFILE | tr '.c' '.o' < gcc -c $CFILE
+gcc -c $CFILE -o $CFILE | tr -r '.c' '.o'
