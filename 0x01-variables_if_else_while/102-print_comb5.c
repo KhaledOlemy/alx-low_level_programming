@@ -13,25 +13,28 @@ int main(void)
 		{
 			for (k = i; k < 10; k++)
 			{
-				for (l = j + 1; l < 10; l++)
+				for (l = 0; l < 10; l++)
 				{
-					if (i == k && j == l)
+					if (l >= j)
 					{
-					}
-					else
-					{
-						putchar(i + 48);
-						putchar(j + 48);
-						putchar(' ');
-						putchar(k + 48);
-						putchar(l + 48);
-						if (i == 9 && j == 8)
+						if (i == k && j == l)
 						{
 						}
 						else
 						{
-							putchar(',');
+							putchar(i + 48);
+							putchar(j + 48);
 							putchar(' ');
+							putchar(k + 48);
+							putchar(l + 48);
+							if (i == 9 && j == 8)
+							{
+							}
+							else
+							{
+								putchar(',');
+								putchar(' ');
+							}
 						}
 					}
 				}
