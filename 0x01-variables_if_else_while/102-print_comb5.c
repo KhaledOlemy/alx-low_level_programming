@@ -7,6 +7,7 @@
 int main(void)
 {
 	int i, j, x, y;
+	
 	for (i = 0; i < 99; i++)
 	{
 		for (j = i + 1; j < 100; j++)
