@@ -3,41 +3,30 @@
  * main - this should print something complicated
  *
  * Return: 0, Success we hope
-*/
+ */
 int main(void)
 {
-	int i, j, k, l;
-	for (i = 0; i < 10; i++)
+	int i, j, x, y;
+	for (i = 0; i < 99; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (j = i + 1; j < 100; j++)
 		{
-			for (k = i; k < 10; k++)
+			x = i / 10;
+			y = i % 10;
+			putchar(x+48);
+			putchar(y+48);
+			putchar(' ');
+			x = j / 10;
+			y = j % 10;
+			putchar(x+48);
+			putchar(y+48);
+			if (i == 98 && j == 99)
 			{
-				for (l = 0; l < 10; l++)
-				{
-					if (l >= j)
-					{
-						if (i == k && j == l)
-						{
-						}
-						else
-						{
-							putchar(i + 48);
-							putchar(j + 48);
-							putchar(' ');
-							putchar(k + 48);
-							putchar(l + 48);
-							if (i == 9 && j == 8)
-							{
-							}
-							else
-							{
-								putchar(',');
-								putchar(' ');
-							}
-						}
-					}
-				}
+			}
+			else
+			{
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
