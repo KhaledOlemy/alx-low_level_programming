@@ -13,13 +13,13 @@ int main(void)
 		{
 			x = i / 10;
 			y = i % 10;
-			putchar(x+48);
-			putchar(y+48);
+			putchar(x + 48);
+			putchar(y + 48);
 			putchar(' ');
 			x = j / 10;
 			y = j % 10;
-			putchar(x+48);
-			putchar(y+48);
+			putchar(x + 48);
+			putchar(y + 48);
 			if (i == 98 && j == 99)
 			{
 			}
