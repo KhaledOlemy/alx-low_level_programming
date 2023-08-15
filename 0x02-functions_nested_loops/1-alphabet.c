@@ -4,7 +4,7 @@
  *
  * Retrun: 0 SUCCESS
  */
-
+void print_alphabet(void);
 int main(void)
 {
 	print_alphabet();
