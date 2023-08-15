@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-	long y, z, m;
+	long y, z, m, out;
 
 	y = 1;
 	z = 2;
@@ -17,10 +17,11 @@ int main(void)
 		z += m;
 		if (z >= 4000000)
 		{
+			out = z;
 			break;
 		}
 	}
-	printf("%lu", z);
+	printf("%lu", out);
 	putchar('\n');
 	return (0);
 }
