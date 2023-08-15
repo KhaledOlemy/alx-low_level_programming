@@ -9,25 +9,15 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 void _putchar(char c);
-void print_alphabet(void);
-void typeit(char *value)
-{
-	int sizeval = strlen(value);
-	int i;
-	for (i = 0; i < sizeval; i++)
-	{
-		_putchar(value[i]);
-	}
-	_putchar('\n');
-}
 void print_alphabet(void)
 {
-	char c;
+	char s;
 
-	c = 97;
-	while (c < 123)
+	s = 97;
+	while (s < 123)
 	{
-		_putchar(c);
+		_putchar(s);
+		s++;
 	}
 	_putchar('\n');
 }
