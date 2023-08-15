@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <string.h>
+#include <stdlib.h>
 
 /**
  * _putchar - writes the character c to stdout
@@ -86,5 +87,10 @@ int print_sign(int n)
 		_putchar('0');
 		out = 0;
 	}
+	return out;
+}
+int abs(int inp)
+{
+	int out = abs(inp);
 	return out;
 }
