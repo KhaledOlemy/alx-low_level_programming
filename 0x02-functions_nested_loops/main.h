@@ -34,9 +34,8 @@ void print_alphabet(void)
 void print_alphabet_x10(void);
 {
 	int x;
-	while (x < 10)
+	for (x = 0; x < 10; x++)
 	{
-		print_alphabet(void);
-		x++;
+		print_alphabet();
 	}
 }
