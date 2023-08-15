@@ -8,9 +8,12 @@ int main(void)
 {
 	long x, y, z, m;
 
-	y = 0;
-	z = 1;
-	for (x = 0; x < 50; x++)
+	y = 1;
+	z = 2;
+	printf("%d", y);
+	printf(',');
+	printf(' ');
+	for (x = 0; x < 49; x++)
 	{
 		printf("%lu", z);
 		putchar(',');
