@@ -228,3 +228,56 @@ void print_to_98(int n)
 		printf("\n");
 	}
 }
+void print_times_table(int n)
+{
+        int x,y,i,j,k,l,m;
+        if (n > 15 || n < 0)
+        {
+                return;
+        }
+        n += 1;
+        for (x = 0; x < n; x++)
+        {
+                for (y=0; y < n; y++)
+                {
+                        i = x * y;
+                        if (y == 0)
+                        {
+                                _putchar(48);
+                        }
+                        else if (i >= 100)
+                        {
+                                j = i / 100;
+                                k = i % 100;
+                                l = k / 10;
+                                m = k % 10;
+                                _putchar(',');
+                                _putchar(' ');
+                                _putchar(j+48);
+                                _putchar(l+48);
+                                _putchar(m+48);
+
+                        }
+                        else if (i >= 10)
+                        {
+                                l = i / 10;
+                                m = i % 10;
+                                _putchar(',');
+                                _putchar(' ');
+                                _putchar(' ');
+                                _putchar(l+48);
+                                _putchar(m+48);
+                        }
+                        else
+                        {
+                                _putchar(',');
+                                _putchar(' ');
+                                _putchar(' ');
+                                _putchar(' ');
+                                _putchar(i+48);
+                        }
+
+                }
+                _putchar('\n');
+        }
+}
