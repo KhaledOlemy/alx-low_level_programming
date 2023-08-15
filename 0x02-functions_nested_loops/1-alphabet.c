@@ -5,5 +5,3 @@
  *
  * Return: 0 SUCCESS
  */
-
-void print_alphabet(void);
