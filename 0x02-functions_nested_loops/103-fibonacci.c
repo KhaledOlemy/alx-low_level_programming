@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-	long x, y, z, m;
+	long y, z, m;
 
 	y = 1;
 	z = 2;
