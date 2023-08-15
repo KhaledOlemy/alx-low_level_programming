@@ -15,7 +15,6 @@ int main(void)
 	putchar(' ');
 	while (z < 4000000)
 	{
-		printf("%lu", z);
 		m = y;
 		y = z;
 		z += m;
@@ -23,12 +22,8 @@ int main(void)
 		{
 			break;
 		}
-		else
-		{
-			putchar(',');
-			putchar(' ');
-		}
 	}
+	printf("%lu", z);
 	putchar('\n');
 	return (0);
 }
