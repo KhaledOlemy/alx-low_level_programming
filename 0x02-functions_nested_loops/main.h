@@ -11,12 +11,13 @@
 void _putchar(char c);
 void print_alphabet(void)
 {
-	char c;
+	char s;
 
-	c = 97;
-	while (c < 123)
+	s = 97;
+	while (s < 123)
 	{
-		_putchar(c);
+		_putchar(s);
+		s++;
 	}
 	_putchar('\n');
 }
