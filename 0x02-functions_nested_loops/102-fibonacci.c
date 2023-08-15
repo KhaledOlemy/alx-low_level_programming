@@ -10,9 +10,9 @@ int main(void)
 
 	y = 1;
 	z = 2;
-	printf("%d", y);
-	printf(',');
-	printf(' ');
+	putchar(48+1);
+	putchar(',');
+	putchar(' ');
 	for (x = 0; x < 49; x++)
 	{
 		printf("%lu", z);
