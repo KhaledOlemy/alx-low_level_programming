@@ -138,3 +138,50 @@ void jack_bauer(void)
 		}
 	}
 }
+void times_table(void)
+{
+	int x,y,temp,a,b;
+	for (x = 0; x < 10; x++)
+	{
+		for (y = 0; y < 10; y++)
+		{
+			if (y != 9)
+			{
+				temp = x * y;
+				if (temp < 10)
+				{
+					_putchar(' ');
+					_putchar(temp+48);
+					_putchar(',');
+					_putchar(' ');
+				}
+				else
+				{
+					a = temp / 10;
+					b = temp % 10;
+					_putchar(a+48);
+					_putchar(b+48);
+					_putchar(',');
+					_putchar(' ');
+				}
+			}
+			else
+			{
+				temp = x * y;
+				if (temp < 10)
+				{
+					_putchar(' ');
+					_putchar(temp+48);
+				}
+				else
+				{
+					a = temp / 10;
+					b = temp % 10;
+					_putchar(a+48);
+					_putchar(b+48);
+				}
+			}
+		}
+		_putchar('\n');
+	}
+}
