@@ -31,7 +31,7 @@ void print_alphabet(void)
 	}
 	_putchar('\n');
 }
-void print_alphabet_x10(void);
+void print_alphabet_x10(void)
 {
 	int x;
 	for (x = 0; x < 10; x++)
