@@ -39,3 +39,17 @@ void print_alphabet_x10(void)
 		print_alphabet();
 	}
 }
+int _islower(char c)
+{
+	int out;
+	int charint = (int) c;
+	if (charint > 96 && charint < 123)
+	{
+		out = 1;
+	}
+	else
+	{
+		out = 0;
+	}
+	return out;
+}
