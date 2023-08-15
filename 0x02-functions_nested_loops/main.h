@@ -16,6 +16,7 @@ int _putchar(char c)
 void typeit(char* value)
 {
 	int sizeval = strlen(value);
+	int i;
 	for (i = 0; i < sizeval; i++)
 	{
 		_putchar(value[i]);
