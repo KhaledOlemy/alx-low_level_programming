@@ -14,9 +14,5 @@ void typeit(char *value)
 	int sizeval = strlen(value);
 	int i;
 	_putchar(value*);
-	// for (i = 0; i < sizeval; i++)
-	// {
-	// 	_putchar(value[i]);
-	// }
 	_putchar('\n');
 }
