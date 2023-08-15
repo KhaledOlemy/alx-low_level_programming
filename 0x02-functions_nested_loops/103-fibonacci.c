@@ -7,6 +7,7 @@
 int main(void)
 {
 	long y, z, m, out;
+
 	y = 1;
 	z = 2;
 	out = z;
