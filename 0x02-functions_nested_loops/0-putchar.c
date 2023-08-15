@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "main.h"
+#include <unistd.h>
 
 /**
  * main- this prints the word _putchar
@@ -14,7 +15,7 @@ int main(void)
 
 	for (i = 0; i < strlen(val); i++)
 	{
-		putchar(val[i]);
+		_putchar(val[i]);
 	}
 	putchar('\n');
 	return (0);
