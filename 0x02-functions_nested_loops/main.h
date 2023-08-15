@@ -9,4 +9,15 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 void _putchar(char c);
-void print_alphabet(void);
+void print_alphabet(void)
+{
+	char s;
+
+	s = 97;
+	while (s < 123)
+	{
+		_putchar(s);
+		s++;
+	}
+	_putchar('\n');
+}
