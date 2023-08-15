@@ -101,3 +101,40 @@ int print_last_digit(int inp)
 	_putchar(out + 48);
 	return out;
 }
+void jack_bauer(void)
+{
+	int hour, minute;
+	int x, y;
+	for (hour = 0; hour < 24; hour++)
+	{
+		for (minute = 0; minute < 60; minute++)
+		{
+			if (hour < 10)
+			{
+				_putchar('0');
+				_putchar(hour + 48);
+			}
+			else
+			{
+				x = hour / 10;
+				y = hour % 10;
+				_putchar(x+48);
+				_putchar(y+48);
+			}
+			_putchar(':');
+			if (minute < 10)
+			{
+				_putchar('0');
+				_putchar(minute + 48);
+			}
+			else
+			{
+				x = minute / 10;
+				y = minute % 10;
+				_putchar(x+48);
+				_putchar(y+48);
+			}
+			_putchar('\n');
+		}
+	}
+}
