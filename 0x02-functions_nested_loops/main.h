@@ -94,3 +94,10 @@ int _abs(int inp)
 	int out = abs(inp);
 	return out;
 }
+int print_last_digit(int inp)
+{
+	int out;
+	out = _abs(inp % 10);
+	_putchar(out + 48);
+	return out;
+}
