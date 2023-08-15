@@ -7,13 +7,6 @@
  */
 int main(void)
 {
-	int i;
-	char *val = "_putchar";
-	int sizeval = strlen(val);
-	for (i = 0; i < sizeval; i++)
-	{
-		_putchar(val[i]);
-	}
-	putchar('\n');
+	typeit("_putchar");
 	return (0);
 }

@@ -12,3 +12,13 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
+void typeit(char* value)
+{
+	int sizeval = strlen(value);
+	for (i = 0; i < sizeval; i++)
+	{
+		_putchar(value[i]);
+	}
+	_putchar('\n');
+}
