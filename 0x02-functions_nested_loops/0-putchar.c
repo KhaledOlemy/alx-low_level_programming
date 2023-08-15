@@ -1,4 +1,4 @@
-#include "0-putchar.h"
+#include "main.h"
 
 /**
  * main- this prints the word _putchar

@@ -9,7 +9,6 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 void _putchar(char c);
-/* void print_alphabet(void); */
 void typeit(char *value)
 {
 	int sizeval = strlen(value);
