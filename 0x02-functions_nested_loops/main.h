@@ -53,3 +53,17 @@ int _islower(char c)
 	}
 	return out;
 }
+int _isalpha(int c)
+{
+	int out;
+	int charint = (int) c;
+	if ((charint > 96 && charint < 123) || (charint > 64 && charint < 91))
+	{
+		out = 1;
+	}
+	else
+	{
+		out = 0;
+	}
+	return out;
+}
