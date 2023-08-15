@@ -9,6 +9,7 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 void _putchar(char c);
+void print_alphabet(void);
 void typeit(char *value)
 {
 	int sizeval = strlen(value);
@@ -16,6 +17,17 @@ void typeit(char *value)
 	for (i = 0; i < sizeval; i++)
 	{
 		_putchar(value[i]);
+	}
+	_putchar('\n');
+}
+void print_alphabet(void)
+{
+	char c;
+
+	c = 97;
+	while (c < 123)
+	{
+		_putchar(c);
 	}
 	_putchar('\n');
 }
