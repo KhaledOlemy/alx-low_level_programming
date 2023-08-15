@@ -31,3 +31,12 @@ void print_alphabet(void)
 	}
 	_putchar('\n');
 }
+void print_alphabet_x10(void);
+{
+	int x;
+	while (x < 10)
+	{
+		print_alphabet(void);
+		x++;
+	}
+}
