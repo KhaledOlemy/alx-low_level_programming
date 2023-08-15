@@ -10,9 +10,6 @@ int main(void)
 
 	y = 1;
 	z = 2;
-	putchar(48 + 1);
-	putchar(',');
-	putchar(' ');
 	while (z < 4000000)
 	{
 		m = y;
