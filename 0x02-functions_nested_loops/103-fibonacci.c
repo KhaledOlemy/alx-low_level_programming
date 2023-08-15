@@ -7,18 +7,17 @@
 int main(void)
 {
 	long y, z, m, out;
-
 	y = 1;
 	z = 2;
+	out = z;
 	while (z < 4000000)
 	{
 		m = y;
 		y = z;
 		z += m;
-		if (z >= 4000000)
+		if (z % 2 == 0)
 		{
-			out = z;
-			break;
+			out += z;
 		}
 	}
 	printf("%lu", out);
