@@ -145,7 +145,14 @@ void times_table(void)
 	{
 		for (y = 0; y < 10; y++)
 		{
-			if (y != 9)
+			if (x == 0)
+			{
+				temp = 0;
+				_putchar(temp+48);
+				_putchar(',');
+				_putchar(' ');
+			}
+			else if (y != 9)
 			{
 				temp = x * y;
 				if (temp < 10)
