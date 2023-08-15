@@ -192,3 +192,8 @@ void times_table(void)
 		_putchar('\n');
 	}
 }
+int add(int inp1, int inp2)
+{
+	int out = inp1 + inp2;
+	return out;
+}
