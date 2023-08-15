@@ -8,7 +8,8 @@
 int main(void)
 {
 	int sum = 0;
-	int i,x,y;
+	int i, x, y;
+
 	for (i = 0; i < 1024; i++)
 	{
 		x = i % 3;
