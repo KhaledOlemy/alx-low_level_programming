@@ -67,3 +67,24 @@ int _isalpha(int c)
 	}
 	return out;
 }
+int print_sign(int n)
+{
+	int out;
+	int charint = (int) n;
+	if (charint > 0)
+	{
+		_putchar('+');
+		out = 1;
+	}
+	else if (charint < 0)
+	{
+		_putchar('-');
+		out = -1;
+	}
+	else
+	{
+		_putchar('0');
+		out = 0;
+	}
+	return out;
+}
