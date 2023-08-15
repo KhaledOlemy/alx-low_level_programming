@@ -15,12 +15,19 @@ int main(void)
 	putchar(' ');
 	for (x = 0; x < 49; x++)
 	{
-		printf("%lu", z);
-		putchar(',');
-		putchar(' ');
-		m = y;
-		y = z;
-		z += m;
+		if (x == 48)
+		{
+			printf("%lu", z);
+		}
+		else
+		{
+			printf("%lu", z);
+			putchar(',');
+			putchar(' ');
+			m = y;
+			y = z;
+			z += m;
+		}
 	}
 	putchar('\n');
 	return (0);
