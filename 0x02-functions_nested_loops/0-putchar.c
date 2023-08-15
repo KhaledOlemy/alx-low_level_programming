@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "main.h"
+#include "main"
 
 /**
  * main- this prints the word _putchar
