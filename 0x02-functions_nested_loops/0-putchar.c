@@ -11,8 +11,8 @@ int main(void)
 {
 	int i;
 	char *val = "_putchar";
-
-	for (i = 0; i < strlen(val); i++)
+	int sizeval = strlen(val);
+	for (i = 0; i < sizeval; i++)
 	{
 		_putchar(val[i]);
 	}
