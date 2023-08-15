@@ -89,7 +89,7 @@ int print_sign(int n)
 	}
 	return out;
 }
-int abs(int inp)
+int _abs(int inp)
 {
 	int out = abs(inp);
 	return out;
