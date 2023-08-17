@@ -3,7 +3,7 @@
  * more_numbers- this function prints numbers form 0 to 14
  * 10 times
  * Return: 0, always success
-*/
+ */
 void more_numbers(void)
 {
 	int i, j, k, l;
