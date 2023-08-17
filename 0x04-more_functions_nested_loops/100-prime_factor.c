@@ -14,13 +14,8 @@ int main(void)
 		{
 			target /= i;
 			new = i;
-			printf("%lu", new);
-			printf("\n");
 		}
 	}
-	printf("---");
-	printf("\n");
-	printf("%lu", new);
-	printf("\n");
+	printf("%lu\n", new);
 	return (0);
 }
