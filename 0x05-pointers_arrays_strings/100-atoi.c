@@ -7,21 +7,19 @@
  */
 int _atoi(char *s)
 {
-	int length, i, step, out, pos, neg;
+	int length, i, step, neg;
+	unsigned int out;
 
-	out = -19178189;
-	pos = 0;
+	out = 19178189;
 	neg = 0;
 	length = strlen(s);
 	for (i = 0; i < length; i++)
 	{
-		if (out == -19178189)
+		if (out == 19178189)
 		{
 			step = (int) s[i];
 			if (step >= 48 && step <= 57)
 			{out = step - 48; }
-			else if (step == 43)
-			{pos += 1; }
 			else if (step == 45)
 			{neg += 1; }
 			else
@@ -38,9 +36,9 @@ int _atoi(char *s)
 			{break; }
 		}
 	}
-	if (neg > pos)
-	{out = out * -1; }
-	if (out == 19178189 || out == -19178189)
+	if (out == 19178189)
 	{out = 0; }
+	if (neg % 2 == 1)
+	{out = -out; }
 	return (out);
 }
