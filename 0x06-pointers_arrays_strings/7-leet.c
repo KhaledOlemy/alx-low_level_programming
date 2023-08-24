@@ -13,10 +13,6 @@ char *leet(char *s)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == '\0')
-		{
-			break;
-		}
 		for (j = 0; j < 10; j++)
 		{
 			if (s[i] == s1[j])
