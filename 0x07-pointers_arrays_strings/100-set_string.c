@@ -5,10 +5,5 @@
  */
 void set_string(char **s, char *to)
 {
-	while (*to != '\0')
-	{
-		*s = to;
-		s += 1;
-		to += 1;
-	}
+	*s = to;
 }
