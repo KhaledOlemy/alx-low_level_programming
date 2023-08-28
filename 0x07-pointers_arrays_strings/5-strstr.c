@@ -8,12 +8,11 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *ptr1, *ptr2, *target;
+	char *ptr1, *ptr2;
 	int i, j;
 
 	ptr1 = haystack;
 	ptr2 = needle;
-	target = needle;
 	for (i = 0; ptr1[i] != '\0'; i++)
 	{
 		for (j = 0; ptr2[j] != '\0'; j++)
@@ -25,15 +24,8 @@ char *_strstr(char *haystack, char *needle)
 		}
 		if (ptr2[j] == '\0')
 		{
-			target = &ptr1[i];
+			return (&ptr1[i]);
 		}
 	}
-	if (target != needle)
-	{
-		return (target);
-	}
-	else
-	{
-		return (NULL);
-	}
+	return (NULL);
 }
