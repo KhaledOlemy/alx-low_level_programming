@@ -1,33 +1,39 @@
 #include <stdio.h>
+/**
+ * _strstr- this function searches for the needle in haystack
+ * @haystack: this is the entire string to search in
+ * @needle: this is the string to search for
+ * Return: pointer to the substring matching needle inside the
+ * haystack
+ */
 char *_strstr(char *haystack, char *needle)
 {
-	char *ptr1, *ptr2, *ptr3;
+	char *ptr1, *ptr2, *target;
+	int i, j;
 
-	ptr3 = NULL;
-	ptr1 = needle;
-	while (*ptr1 != '\0')
+	ptr1 = haystack;
+	ptr2 = needle;
+	target = needle;
+	for (i = 0; ptr1[i] != '\0'; i++)
 	{
-		if (*ptr2 == '\0')
+		for (j = 0; ptr2[j] != '\0'; j++)
 		{
-			ptr2 = haystack;
-		}
-		while (*ptr2 != '\0')
-		{
-			if (*ptr2 == *ptr1)
+			if (ptr1[i + j] != ptr2[j])
 			{
-				if (ptr3 == NULL)
-				{
-					ptr3 = ptr1 - 1;
-				}
-				ptr2 += 1;
-				break;				
-			}
-			else
-			{
-				ptr2 += 1;
+				break;
 			}
 		}
-		ptr1 += 1;
+		if (ptr2[j] == '\0')
+		{
+			target = &ptr1[i];
+		}
 	}
-	return (ptr3);
+	if (target != needle)
+	{
+		return (target);
+	}
+	else
+	{
+		return (NULL);
+	}
 }
