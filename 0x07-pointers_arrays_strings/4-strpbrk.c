@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * _strpbrk- this function searches for a set of characters
  * inside a string until first occurence, then breaks
@@ -28,5 +29,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 		s += 1;
 	}
-	return (s);
+	return (NULL);
 }
