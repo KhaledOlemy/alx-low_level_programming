@@ -8,4 +8,3 @@ int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int get_sqrt(int i, int j);
 int is_it_prime(int n, int j)
-
