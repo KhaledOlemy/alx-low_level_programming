@@ -7,7 +7,14 @@
 */
 int main(int argc, char *argv[])
 {
-	argc = 0;
-	printf("%s", argv[argc]);
+	if (argc != 1)
+	{
+		printf("%s", argv[argc-1]);
+	}
+	else
+	{
+		printf("%s", argv[0]);
+	}
+
 	return (0);
 }
