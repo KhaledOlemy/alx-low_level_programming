@@ -10,8 +10,7 @@
 */
 int main(int argc, char *argv[])
 {
-	char *t;
-	int count = 0, num, j;
+	int count = 0, num;
 
 	if (argc != 2)
 	{
@@ -20,16 +19,12 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		t = argv[1];
-		for (j = 0; t[j] != '\0'; j++)
-		{
-			if (t[j] < '0' || t[j] > '9')
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
 		num = atoi(argv[1]);
+		if (num < 0)
+		{
+			printf("%d\n", 0);
+			return (0);
+		}
 		count += num / 25;
 		num %= 25;
 		count += num / 10;
