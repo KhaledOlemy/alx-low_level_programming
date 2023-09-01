@@ -7,14 +7,15 @@
 */
 int main(int argc, char *argv[])
 {
-	if (argc != 1)
-	{
-		printf("%s", argv[argc-1]);
-	}
-	else
-	{
-		printf("%s", argv[0]);
-	}
+	int i;
 
+	for (i = 0; i < argc; i++)
+	{
+		if (i >= 1)
+		{
+			break;
+		}
+		printf("%s", argv[i]);
+	}
 	return (0);
 }
