@@ -1,21 +1,12 @@
 #include <stdio.h>
 /**
  * main- this function prints its name
- * @argc: this is the number of arguments entered
+ * @argc: this is the number of arguments entered (unused)
  * @argv: this is the actual arguments as strings in an array
  * Return: 0, always success
 */
-int main(int argc, char *argv[])
+int main(int argc __attribute__((unused)), char *argv[])
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
-	{
-		if (i >= 1)
-		{
-			break;
-		}
-		printf("%s", argv[i]);
-	}
+	printf("%s", argv[0]);
 	return (0);
 }
