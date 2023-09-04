@@ -12,6 +12,10 @@ char *argstostr(int ac, char **av)
 	int j, i = 0, k = 0, cnt = 0, x = 0, n = 0;
 	char *ptr;
 
+	if (ac == 0 || av == NULL)
+	{
+		return (NULL);
+	}
 	while (cnt < ac)
 	{
 		if (av[cnt][x] == '\0')
@@ -25,11 +29,7 @@ char *argstostr(int ac, char **av)
 			n++;
 		}
 	}
-	if (ac == 0 || av == NULL)
-	{
-		return (NULL);
-	}
-	ptr = malloc(n + 1);
+	ptr = malloc(n + 10);
 	if (ptr == NULL)
 	{
 		return (NULL);
