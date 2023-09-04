@@ -33,8 +33,8 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	if (s1 != NULL)
 	l = 0;
+	if (s1 != NULL)
 	{
 		for (l = 0; l < k && s1[l] != '\0'; l++)
 		{ptr[l] = s1[l]; }
