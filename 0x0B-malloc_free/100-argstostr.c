@@ -9,14 +9,27 @@
 */
 char *argstostr(int ac, char **av)
 {
-	int i = 0, j, k = 0;
+	int j, i = 0, k = 0, cnt = 0, x = 0, n = 0;
 	char *ptr;
 
+	while (cnt < ac)
+	{
+		if (av[cnt][x] == '\0')
+		{
+			cnt += 1;
+			x = 0;
+		}
+		else
+		{
+			x++;
+			n++;
+		}
+	}
 	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
 	}
-	ptr = malloc(100 * ac);
+	ptr = malloc(n);
 	if (ptr == NULL)
 	{
 		return (NULL);
