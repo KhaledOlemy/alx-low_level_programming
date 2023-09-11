@@ -13,7 +13,7 @@ int _strlen(char *s)
 	{
 		out += 1;
 	}
-	return(out);
+	return (out);
 }
 
 /**
@@ -56,20 +56,20 @@ dog_t *new_dog(char *name, float age, char *owner)
 	doggo = malloc(sizeof(dog_t));
 	if (!doggo)
 	{
-		free (doggo);
+		free(doggo);
 		return (NULL);
 	}
 	doggo->name = malloc(l1 * sizeof(char));
 	if (!doggo->name)
 	{
-		free (doggo);
+		free(doggo);
 		free(doggo->name);
 		return (NULL);
 	}
 	doggo->owner = malloc(l2 * sizeof(char));
 	if (!doggo->owner)
 	{
-		free (doggo);
+		free(doggo);
 		free(doggo->name);
 		free(doggo->owner);
 		return (NULL);
