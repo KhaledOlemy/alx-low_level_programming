@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "3-calc.h"
 /**
  * main - main program that calculates
@@ -16,7 +17,6 @@ int main(int argc, char *argv[])
 {
 	int x, y, out;
 	int (*fun)(int a, int b);
-
 	if (argc != 4)
 	{
 		printf("Error\n");
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	x = atoi(argv[1]);
 	y = atoi(argv[3]);
 	fun = get_op_func(argv[2]);
-	if (!fun)
+	if (!fun || strlen(argv[2]) != 1)
 	{
 		printf("Error\n");
 		exit(99);
