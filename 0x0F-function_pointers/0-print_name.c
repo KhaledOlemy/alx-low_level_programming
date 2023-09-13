@@ -1,3 +1,4 @@
+#include "function_pointers.h"
 /**
  * print_name - prints a word depends on the function entered
  * as an argument
