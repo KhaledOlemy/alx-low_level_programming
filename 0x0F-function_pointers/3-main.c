@@ -16,10 +16,9 @@ int main(int argc, char *argv[])
 {
 	int x, y, out;
 	int (*fun)(int a, int b);
-
 	if (argc != 4)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(98);
 	}
 	x = atoi(argv[1]);
@@ -27,6 +26,7 @@ int main(int argc, char *argv[])
 	fun = get_op_func(argv[2]);
 	if (!fun)
 	{
+		printf("Error\n");
 		exit(99);
 	}
 	out = fun(x, y);
