@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	array = (char *)main;
 	for (i = 0; i < number_of_bytes; i++)
 	{
-		printf("%2hx", array[i]);
+		printf("%22hhx", array[i]);
 		if (i != number_of_bytes - 1)
 		{
 			printf(" ");
