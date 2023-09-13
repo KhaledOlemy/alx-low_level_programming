@@ -30,6 +30,6 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	out = fun.f(x, y);
-	printf("%d", out);
+	printf("%d\n", out);
 	return (0);
 }
