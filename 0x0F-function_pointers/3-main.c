@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 {
 	int x, y, out;
 	int (*fun)(int a, int b);
+
 	if (argc != 4)
 	{
 		printf("Error\n");
