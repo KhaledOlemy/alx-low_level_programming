@@ -13,9 +13,6 @@ void print_all(const char * const format, ...)
 	va_list item;
 
 	va_start(item, format);
-	while (!format)
-	{	printf("\n");
-		return; }
 	while (format[i] != '\0')
 	{
 		flag = 0;
@@ -40,7 +37,7 @@ void print_all(const char * const format, ...)
 			break;
 		default:
 			flag = 1;
-			continue;
+			break;
 		}
 		i++;
 		if (format[i] != '\0' && flag == 0)
