@@ -13,10 +13,8 @@ void print_all(const char * const format, ...)
 	va_list item;
 
 	va_start(item, format);
-	while(!format)
-	{
-		return;
-	}
+	while (!format)
+	{return; }
 	while (format[i] != '\0')
 	{
 		flag = 0;
