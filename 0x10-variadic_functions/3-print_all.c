@@ -8,24 +8,25 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0, flag;
-	char *temp;
+	int i = 0;
+	char *temp, *separator;
 	va_list item;
 
+	separator = "";
 	va_start(item, format);
-	while (!format && format[0] != '\0')
-	{printf("\n");
-		return; }
+	if (!format || format[0] == '\0')
+	{ return; }
 	while (format[i] != '\0')
 	{
-		flag = 0;
 		switch (format[i])
 		{
 		case 'i':
-			printf("%d", va_arg(item, int));
+			printf("%s%d", separator, va_arg(item, int));
+			separator = ", ";
 			break;
 		case 'c':
-			printf("%c", va_arg(item, int));
+			printf("%s%c", separator, va_arg(item, int));
+			separator = ", ";
 			break;
 		case 's':
 			temp = va_arg(item, char*);
@@ -33,18 +34,17 @@ void print_all(const char * const format, ...)
 			{
 				temp = "(nil)";
 			}
-			printf("%s", temp);
+			printf("%s%s", separator, temp);
+			separator = ", ";
 			break;
 		case 'f':
-			printf("%f", va_arg(item, double));
+			printf("%s%f", separator, va_arg(item, double));
+			separator = ", ";
 			break;
 		default:
-			flag = 1;
 			break;
 		}
 		i++;
-		if (format[i] != '\0' && flag == 0)
-			printf(", ");
 	}
 	printf("\n");
 	va_end(item);
