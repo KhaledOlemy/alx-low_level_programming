@@ -14,8 +14,8 @@ void print_all(const char * const format, ...)
 
 	separator = "";
 	va_start(item, format);
-	if (!format')
-	{ return; }
+	if (!format)
+	{return; }
 	while (format[i] != '\0')
 	{
 		switch (format[i])
