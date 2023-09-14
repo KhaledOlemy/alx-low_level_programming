@@ -40,7 +40,7 @@ void print_all(const char * const format, ...)
 			break;
 		default:
 			flag = 1;
-			break;
+			continue;
 		}
 		i++;
 		if (format[i] != '\0' && flag == 0)
