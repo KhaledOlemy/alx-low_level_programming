@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include <string.h>
 /**
  * print_numbers - prints numbers separated by @separator
  * @separator: the separator between items
@@ -12,7 +11,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list item;
 	unsigned int i;
 
-	if (separator == NULL || strlen(separator) == 0)
+	if (separator == NULL)
 	{
 		return;
 	}
