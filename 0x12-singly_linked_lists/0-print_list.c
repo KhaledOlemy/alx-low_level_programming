@@ -19,12 +19,16 @@ size_t print_list(const list_t *h)
 		}
 		else
 		{
-			temp_len = strlen(h->str);
-			_print_char('[');
+			temp_len = 0;
+			while (h->str[temp_len] != '\0')
+			{
+				temp_len++;
+			}
+			_putchar('[');
 			_print_int(temp_len, 1000000000, 0);
 			_print_string("] ");
 			_print_string(h->str);
-			_print_char('\n');
+			_putchar('\n');
 		}
 		i++;
 		h = h->next;
@@ -33,7 +37,7 @@ size_t print_list(const list_t *h)
 }
 
 /**
- * _print_string - sub function of _printf to print strings
+ * _print_string - rint strings
  * @s: input string to print
  *
  * Return: length of characters printed
@@ -49,14 +53,14 @@ int _print_string(char *s)
 	}
 	while (s[i] != '\0')
 	{
-		_print_char(s[i]);
+		_putchar(s[i]);
 		i++;
 	}
 	return (i);
 }
 
 /**
- * _print_int - sub function of _printf to print integers
+ * _print_int - print integers
  * @num: input decimal number to print
  * @iter: highest divisible number to convert decimal to split
  * the number into 1 digit value to print.
@@ -103,18 +107,6 @@ int _print_int(unsigned int num, unsigned int iter, int flag)
 		}
 	}
 	return (i);
-}
-
-/**
- * _print_char - sub function of _printf to print chars
- * @c: input char to print
- *
- * Return: length of characters printed (always 1)
- */
-int _print_char(char c)
-{
-	_putchar(c);
-	return (1);
 }
 
 /**
