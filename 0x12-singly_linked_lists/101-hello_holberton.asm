@@ -1,5 +1,5 @@
 	extern printf
-message:		db "Hello, Holberton", 0
+message:		db "Hello, Holberton\n", 0
 format:			db "%s", 10, 0
 	global main
 main:
