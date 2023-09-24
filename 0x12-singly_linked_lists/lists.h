@@ -1,6 +1,7 @@
 #ifndef _LISTS_H_
 #define _LISTS_H_
 #include <unistd.h>
+#include <stdio.h>
 
 /**
  * struct list_s - singly linked list
@@ -17,7 +18,4 @@ typedef struct list_s
     struct list_s *next;
 } list_t;
 size_t print_list(const list_t *h);
-int _print_string(char *s);
-int _print_int(unsigned int num, unsigned int iter, int flag);
-int _putchar(char c);
 #endif
