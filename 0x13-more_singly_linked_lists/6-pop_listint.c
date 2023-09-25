@@ -13,6 +13,10 @@ int pop_listint(listint_t **head)
 	int num;
 
 	node = *head;
+	if (!node)
+	{
+		return (0);
+	}
 	num = node->n;
 	temp = node->next;
 	*head = temp;
