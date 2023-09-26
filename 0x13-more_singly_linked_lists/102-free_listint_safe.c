@@ -12,6 +12,10 @@ size_t free_listint_safe(listint_t **h)
 	size_t len = 0;
 	int is_valid;
 
+	if (!h)
+	{
+		return (0);
+	}
 	while ((*h)->next)
 	{
 		is_valid = (*h) - (*h)->next;
