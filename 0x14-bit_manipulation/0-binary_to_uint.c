@@ -20,7 +20,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] == '0' || b[i] == '1')
 		{
-			num += (b[i] - '0') * _pow_recursion(2, j);
+			num += (b[i] - '0') * _pow(2, j);
 		}
 		else
 		{
@@ -32,12 +32,12 @@ unsigned int binary_to_uint(const char *b)
 }
 
 /**
- * _pow_recursion- this function calculates x to the power of y
+ * _pow- this function calculates x to the power of y
  * @x: the base number
  * @y: the exponent
  * Return: x to the power of y if y >= 0; else -1 to indicate error.
 */
-int _pow_recursion(int x, int y)
+int _pow(int x, int y)
 {
 	if (y == 0)
 	{
@@ -47,5 +47,5 @@ int _pow_recursion(int x, int y)
 	{
 		return (-1);
 	}
-	return (x * _pow_recursion(x, y - 1));
+	return (x * _pow(x, y - 1));
 }
