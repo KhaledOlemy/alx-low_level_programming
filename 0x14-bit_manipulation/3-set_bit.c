@@ -4,7 +4,7 @@
  * @n: number to alter
  * @index: index, at which to set to 1
  *
- * Return: altered number
+ * Return: 1 if it works, 0 if not
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
