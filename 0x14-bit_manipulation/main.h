@@ -10,4 +10,6 @@ int get_bit(unsigned long int n, unsigned int index);
 int _pow_recursion(unsigned long int x, unsigned long int y);
 int set_bit(unsigned long int *n, unsigned int index);
 int clear_bit(unsigned long int *n, unsigned int index);
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
+int count_binary(unsigned long int n, int c);
 #endif
