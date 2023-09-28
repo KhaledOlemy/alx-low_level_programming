@@ -9,6 +9,10 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
+	if (!n || (!index && index != 0))
+	{
+		return (-1);
+	}
 	return (1 && (n & (_pow_recursion(2, index))));
 }
 
