@@ -14,9 +14,10 @@ int set_bit(unsigned long int *n, unsigned int index)
 	}
 	if (*n & _pow_recursion(2, index))
 	{
-		return (*n);
+		return (1);
 	}
-	return (*n += _pow_recursion(2, index));
+	*n += _pow_recursion(2, index);
+	return (1);
 }
 
 /**
