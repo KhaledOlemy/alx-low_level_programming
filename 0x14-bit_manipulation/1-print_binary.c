@@ -6,19 +6,19 @@
  */
 void print_binary(unsigned long int n)
 {
-	_print_binary(n, 1073741824, 0);
+	print_item(n, 1073741824, 0);
 }
 
 
 /**
- * _print_binary - sub function of _printf to print binaries
+ * print_item - sub function of _printf to print binaries
  * @num: input decimal number to print in binary
  * @iter: highest divisible number to convert decimal to binary
  * @flag: to tell the code, are we still overhead getting zeros (to neglect),
  * or are we in the number boundaries
  *
  */
-void _print_binary(unsigned int num, unsigned int iter, int flag)
+void print_item(unsigned long int num, unsigned long int iter, int flag)
 {
 
 	if (iter != 2)
@@ -26,7 +26,7 @@ void _print_binary(unsigned int num, unsigned int iter, int flag)
 		iter /= 2;
 		if (num / iter == 0 && flag == 0)
 		{
-			_print_binary(num, iter, 0);
+			print_item(num, iter, 0);
 		}
 		else
 		{
@@ -48,7 +48,7 @@ void _print_binary(unsigned int num, unsigned int iter, int flag)
 				}
 			}
 			num %= iter;
-			_print_binary(num, iter, 1);
+			print_item(num, iter, 1);
 		}
 	}
 	else
