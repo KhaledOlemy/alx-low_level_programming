@@ -22,12 +22,10 @@ int main(int argc, char *argv[])
 	r2 = open(argv[2], O_RDONLY);
 	if (r2 == -1)
 	{
-		close_file(r2);
 		o = open(argv[2], O_CREAT | O_WRONLY, 0664);
 	}
 	else
 	{
-		close_file(r2);
 		o = open(argv[2], O_TRUNC | O_WRONLY);
 	}
 	negative_one_check(o, "o", argv[2]);
