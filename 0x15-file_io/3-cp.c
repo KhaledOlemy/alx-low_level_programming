@@ -13,41 +13,41 @@ int main(int argc, char *argv[])
 	char *buffer;
 
 	if (argc != 3)
-	{dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97); }
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
 	r1 = open(argv[1], O_RDONLY);
-	if (r1 == -1)
-	{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98); }
+	negative_one_check(r1, "r", argv[1]);
 	r2 = open(argv[2], O_RDONLY);
 	if (r2 == -1)
-	{o = open(argv[2], O_CREAT | O_WRONLY, 0664); }
-	else
-	{o = open(argv[2], O_TRUNC | O_WRONLY); }
-	if (o == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
+		o = open(argv[2], O_CREAT | O_WRONLY, 0664);
 	}
+	else
+	{
+		o = open(argv[2], O_TRUNC | O_WRONLY);
+	}
+	negative_one_check(o, "o", argv[2]);
 	buffer = create_buffer(argv[2]);
 	r = read(r1, buffer, 1024);
+	negative_one_check(r, "r", argv[2]);
 	while (r > 0)
 	{
-		printf("---------------");
 		w = write(o, buffer, r);
 		if (w == -1)
 		{
-			printf("hi");
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buffer);
-			exit(99);
+			negative_one_check(w, "w", argv[2]);
 		}
 		r = read(r1, buffer, 1024);
+		negative_one_check(r, "r", argv[2]);
 		o = open(argv[2], O_WRONLY | O_APPEND);
+		negative_one_check(o, "o", argv[2]);
 	}
 	free(buffer);
 	close_file(r1);
-	close_file(r2);
+	close_file(o);
 	return (0);
 }
 /**
@@ -84,4 +84,65 @@ void close_file(int fd)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
+}
+/**
+ * negative_one_check - exits main function each according to each error type
+ * @n: number to check
+ * @mode: mode to check on
+ * @str: name of the file
+ */
+void negative_one_check(int n, char *mode, char *str)
+{
+	if (n == -1)
+	{
+		if (_strcmp(mode, "r") == 0)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", str);
+			exit(98);
+		}
+		if (_strcmp(mode, "o") == 0 || _strcmp(mode, "w") == 0)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", str);
+			exit(99);
+		}
+	}
+}
+/**
+ * _strcmp- this function compares 2 strings
+ * @s1: this is the first input string to be compared.
+ * @s2: this is the second input string to be compared.
+ * Return:
+ * 0 if the 2 strings are the same
+ * + if first non matching char is s1 is higher in ascii value than in s2
+ * - if first non matching char is s1 is lower in ascii value than in s2
+ */
+int _strcmp(char *s1, char *s2)
+{
+	int i, j, out;
+	char x;
+
+	out = 999;
+	i = 0;
+	while (s1[i] != '\0')
+	{
+		i++;
+	}
+	for (j = 0; j < i; j++)
+	{
+		if (s1[j] == s2[j])
+		{
+			continue;
+		}
+		else
+		{
+			x = s1[j] - s2[j];
+			out = (int) x;
+			break;
+		}
+	}
+	if (out == 999)
+	{
+		out = 0;
+	}
+	return (out);
 }
