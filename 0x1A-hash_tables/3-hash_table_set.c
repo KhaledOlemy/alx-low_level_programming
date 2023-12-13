@@ -24,7 +24,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	index = key_index((const unsigned char *)key, ht->size);
 	while (table->array[index])
 	{
-		if (strcmp(key, table->array[index]->key))
+		if (strcmp(key, table->array[index]->key) == 0)
 		{ table->array[index]->value = val_cpy;
 			return (1); }
 		table->array[index] = table->array[index]->next; }
