@@ -1,0 +1,2 @@
+all: SRC
+	(CC) $(SRC) -o school
