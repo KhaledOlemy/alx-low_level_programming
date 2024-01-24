@@ -1,4 +1,2 @@
-ACT=gcc
-
 all: main.c school.c
 	ACT main.c school.c -o school
