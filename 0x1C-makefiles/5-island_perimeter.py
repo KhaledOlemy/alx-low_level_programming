@@ -18,9 +18,13 @@ def island_perimeter(grid=[[]]):
         for j in range(len_2):
             pin = 0
             if grid[i][j] == 1:
-                pin += grid[i][j-1]
-                pin += grid[i][j+1]
-                pin += grid[i-1][j]
-                pin += grid[i+1][j]
-            perimeter += (4-pin)
+                if j > 0:
+                    pin += grid[i][j-1]
+                if j < len_2 - 1:
+                    pin += grid[i][j+1]
+                if i > 0:
+                    pin += grid[i-1][j]
+                if j < len_1 - 1:
+                    pin += grid[i+1][j]
+                perimeter = perimeter + (4-pin)
     return perimeter
