@@ -10,10 +10,8 @@ def island_perimeter(grid=[[]]):
     Return: perimeter of land
     """
     len_1 = len(grid)
-    if len_1 <= 1:
-        return 0
     len_2 = len(grid[0])
-    if len_2 <= 1:
+    if len_1 == 0 or len_2 == 0:
         return 0
     perimeter = 0
     for i in range(len_1):
@@ -30,4 +28,3 @@ def island_perimeter(grid=[[]]):
                     pin += grid[i+1][j]
                 perimeter = perimeter + (4-pin)
     return perimeter
-
